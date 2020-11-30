@@ -1,0 +1,43 @@
+
+<div class="text-center m-5">
+    <form autocomplete="off" [formGroup]="form" (ngSubmit)="enviar()">
+        <div class="form-group row">
+            <label for="nombre" class="col-2 col-form-label">Nombre</label>
+            <div class="col-8">
+                <input type="text" class="form-control" placeholder="Nombre" formControlName="nombre" [class.is-invalid]="ValidNombre">
+                <div *ngIf="ValidNombre" class="invalid-feedback">Dato erróneo</div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="nombre" class="col-2 col-form-label">Job</label>
+            <div class="col-8">
+                <input type="text" class="form-control" placeholder="Job" formControlName="job" [class.is-invalid]="ValidJob">
+                <div *ngIf="ValidJob" class="invalid-feedback">Dato erróneo</div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="nombre" class="col-2 col-form-label">Email</label>
+            <div class="col-8">
+                <input type="text" class="form-control" placeholder="Email" formControlName="email" [class.is-invalid]="ValidEmail">
+                <div *ngIf="ValidEmail" class="invalid-feedback">Dato erróneo</div>
+            </div>
+        </div>
+        <div class="row form-group">
+            <label for="" class="col-2 col-form-label">Password</label>
+            <div class="col-8">
+                <input type="text" class="form-control" placeholder="Contraseña" formControlName="pass1" [class.is-invalid]="Pass1">
+            </div>
+        </div>
+        <div class="row form-group">
+            <label for="" class="col-2 col-form-label">Check Password</label>
+            <div class="col-8">
+                <input type="text" class="form-control" placeholder="Confirmar contraseña" formControlName="pass2" [class.is-invalid]="Pass2">
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-10 input-group">
+                <button type="submit" class="btn btn-outline-success btn-block">Guardar</button>
+            </div>
+        </div>
+    </form>
+</div>

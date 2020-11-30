@@ -1,0 +1,20 @@
+
+<div>
+    <div class="row m-5">
+        <div class="col-12">
+            <input type="text" #term (keyup)="buscar(term.value)" class="form-control shadow" placeholder="Buscar usuario por ID">
+        </div>    
+    </div>
+    
+    <div *ngIf="users" style="display: flex; justify-content: center; text-align: center;">
+        <div class="card text-center" style="width: 18rem;">
+            <img class="card-img-top" [src]="imagenes" alt="Ingresa un numero del 1 al 12 en la barra de busqueda">
+            <div class="card-body">
+              <h5 class="card-title">{{ users }}</h5>
+              <p class="card-text">{{ correo }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
